@@ -6,10 +6,9 @@ services:
     ports:
       - ${NGINX_PORT}:5173
     networks:
-      - preflight_pf-net
+      - pf-net
     environment:
       - NGINX_PROXY=${NGINX_PROXY}
       - NGINX_PORT=${NGINX_PORT}
 networks:
-  preflight_pf-net: # Check by using `docker network ls` command
-    external: true
+  pf-net: # Check by using `docker network ls` command
